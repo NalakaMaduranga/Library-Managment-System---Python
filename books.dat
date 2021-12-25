@@ -1,0 +1,12 @@
+[
+    {
+        "id": "234",
+        "name": "nalaka",
+        "description": "qwert",
+        "isbn": "123",
+        "page_count": 23,
+        "issued": true,
+        "author": "nalaka",
+        "year": 2123
+    }
+]
