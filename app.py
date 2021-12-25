@@ -16,7 +16,9 @@ while option != 'X' and option !="x":
         my_functions.find_book(books,"234")
     elif option =='5':
         my_functions.return_book(books)
-
+    elif option == '6':
+        my_functions.update_book(books)
+     
     else:
         print("The given command not exists")
     input("press enter to continue")
