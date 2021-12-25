@@ -57,3 +57,18 @@ def save_book(books):
     except:
         print("Error in saving books")
 
+#defining function to load books
+def load_books():
+    try:
+        file=open("books.dat","r")
+        loaded_books=json.loads(file.read())
+        books=[]
+        for book in loaded_books:
+            new_obj=Book(book['id'],book['name'],book['description'],book['isbn'],book['page_count'],
+    book['issued'],book['author'],book['year'])
+            books.append(new_obj)
+        print("Successfully loaded books")
+        return books
+    except:
+        print("The file dosent exists or error occur during loading")
+        
