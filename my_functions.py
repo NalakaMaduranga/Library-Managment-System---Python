@@ -1,4 +1,7 @@
 from book import Book
+import json
+
+
 #print options
 def print_options():
     print("Press the specific Button")
@@ -42,4 +45,15 @@ def create_book():
     book_input['issued'],book_input['author'],book_input['year'])
     print(book.to_dict())
     return book 
+
+#defining save book
+def save_book(books):
+    json_books=[]
+    for books in books:
+        json_books.append(books.to_dict())
+    try:
+        file=open("books.dat","w")
+        file.write(json.dumps(json_books,indent=4))
+    except:
+        print("Error in saving books")
 
