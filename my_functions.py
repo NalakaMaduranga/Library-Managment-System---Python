@@ -108,4 +108,15 @@ def update_book(books):
         old_book=books[index]
         books[index]=new_book
         del old_bookprint("book successfully updated")
-        
+
+#show books
+def show_all_books(books):
+    for book in books:
+        print(book.to_dict())
+def show_books(books):
+    id=input("please enter id of ther book loooking for")
+    index=find_book(books,id)
+    if index !=None:
+        print(books[index].to_dict())
+    else:
+        print("cannot find the book")

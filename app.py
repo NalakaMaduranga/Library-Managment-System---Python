@@ -18,6 +18,10 @@ while option != 'X' and option !="x":
         my_functions.return_book(books)
     elif option == '6':
         my_functions.update_book(books)
+    elif option == '7':
+        my_functions.show_all_books(books)
+    elif option == '8':
+        my_functions.show_books(books)
      
     else:
         print("The given command not exists")
