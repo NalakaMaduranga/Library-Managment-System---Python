@@ -89,3 +89,12 @@ def issue_book(books):
     else:
         print("Could not find the book")
 
+#return book
+def return_book(books):
+    id = input("Enter the id of the book want to return")
+    index=find_book(books,id)
+    if index != None:
+        books[index].issued = True
+        print("book returned")
+    else:
+        print("Could not find the book")
