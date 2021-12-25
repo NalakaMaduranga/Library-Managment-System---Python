@@ -78,4 +78,14 @@ def find_book(books,id):
         if book.id==id:
             return index
         return None
-    
+
+ #issue book
+def issue_book(books):
+    id = input("Enter the id of the book")
+    index=find_book(books,id)
+    if index != None:
+        books[index].issued = True
+        print("book updated")
+    else:
+        print("Could not find the book")
+
