@@ -20,9 +20,9 @@ def input_book_info():
     descdription =input("Description: ")
     isbn = input("ISBN: ")
     page_count = int(input("Page count: "))
-    issued = input("Issued: y/Y")
+    issued = input("Issued: y/Y: ")
     issued = (issued =="y" or issued == "Y")
-    author = input("Author Name")
+    author = input("Author Name: ")
     year = int(input("Year: "))
     return{
         'id': id,
@@ -71,4 +71,11 @@ def load_books():
         return books
     except:
         print("The file dosent exists or error occur during loading")
-        
+
+#defining function to find book
+def find_book(books,id):
+    for index,book in enumerate(books):
+        if book.id==id:
+            return index
+        return None
+    
