@@ -98,3 +98,14 @@ def return_book(books):
         print("book returned")
     else:
         print("Could not find the book")
+
+#update_book
+def update_book(books):
+    id=print("ENter the book id need to update")
+    index=find_book(books,id)
+    if index !=None:
+        new_book=create_book()
+        old_book=books[index]
+        books[index]=new_book
+        del old_bookprint("book successfully updated")
+        
